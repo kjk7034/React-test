@@ -19,7 +19,7 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 <pre>
 return (
-            &lt;h1>댓글</h1&gt;
+            &lt;h1&gt;댓글&lt;/h1&gt;
             &lt;CommentList /&gt;
             &lt;CommentForm /&gt;
        )
@@ -29,9 +29,9 @@ return (
 <pre>
 return (
         &lt;div&gt;
-            <h1>댓글</h1&gt;
-            <CommentList /&gt;
-            <CommentForm /&gt;
+            &lt;h1&gt;댓글</h1&gt;
+            &lt;CommentList /&gt;
+            &lt;CommentForm /&gt;
         &lt;/div/&gt;
        )
 </pre>
