@@ -9,13 +9,15 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 현재 0.14.0은 다운로드 링크가 깨져 있어서 CDN 주소에서 다운 받아서 활용 (https://cdnjs.com/libraries/react/0.14.0-alpha1)
 
 ## 작업중인 파일 설명
-- 1. helloworld.html
-- 2. tutorial-1.html
-- 3. tutorial-2.html
-- 4. tutorial-3.html
-- 5. tutorial-4.html
+* helloworld.html
+* tutorial-1.html
+* tutorial-2.html
+* tutorial-3.html
+* tutorial-4.html
 
 ## 작업중 발생한 문제점들
+
+### tutorial-2.html 내용
 
 <pre>
 return (
@@ -35,7 +37,7 @@ return (
         &lt;/div/&gt;
        )
 </pre>
-이와 같이 &lt;div&gt;로 한번 감싸서 하나의 컴포넌트를 return!!
+이와 같이 **&lt;div&gt;로 한번 감싸서 하나의 컴포넌트를 return!!**
 
 참고 : http://stackoverflow.com/questions/31284169/uncaught-error-parse-error-line-38-adjacent-jsx-elements-must-be-wrapped-in-a
 
