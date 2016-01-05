@@ -5,8 +5,9 @@
     <title>React - Markdown 추가하기</title>
     <script src="src/react.js"></script>
     <script src="src/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 </head>
-<body>
+<p>
 <div id="content"></div>
 <script type="text/jsx">
     var Comment = React.createClass({
@@ -16,7 +17,7 @@
             <h2 className="comment-Author">
             {this.props.author}
             </h2>
-            {this.props.children}
+            {marked(this.props.children.toString())}
             </div>
             );
         }

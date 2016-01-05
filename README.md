@@ -1,6 +1,6 @@
 # React 튜토리얼 따라해보기
 http://reactkr.github.io/react/docs/tutorial-ko-KR.html
-0.14.0 alpha1 한글판을 읽으면서 하나씩 따라해보는 중...
+0.14.0 alpha1 한글판을 읽으면서 하나씩 따라해보는 중... 따라하면서 느낌점을 적었으며, 기본 설명은 해당 사이트를 통해서 확인.
 
 현재 0.14.5 버전이 있지만, 일단 0.14.0 으로 시작함.
 
@@ -9,11 +9,11 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 현재 0.14.0은 다운로드 링크가 깨져 있어서 CDN 주소에서 다운 받아서 활용 (https://cdnjs.com/libraries/react/0.14.0-alpha1)
 
 ## 작업중인 파일 설명
-* helloworld.html
-* tutorial-1.html
-* tutorial-2.html
-* tutorial-3.html
-* tutorial-4.html
+* helloworld.html (Helloworld)
+* tutorial-1.html (JSX 유,무 문법차이)
+* tutorial-2.html (컴포넌트 조합)
+* tutorial-3.html (props / 컴포넌트 조합)
+* tutorial-4.html (Markdown 추가하기)
 
 ## 작업중 발생한 문제점들
 
