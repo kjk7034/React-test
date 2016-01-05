@@ -2,7 +2,7 @@
 http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 0.14.0 alpha1 한글판을 읽으면서 하나씩 따라해보는 중...
 
-현재 0.14.5 버전이 있지만, 일단 0.14.0 으로 시작함.
+현재 0.14.5 버전(https://facebook.github.io/react/docs/getting-started.html)이 있지만, 일단 0.14.0 으로 시작함.
 
 0.14.0은 JSXTransformer-0.14.0-alpha.js을 사용하고 있고, 0.14.5는 babel을 사용하여 설명을 하고 있음.
 
@@ -18,11 +18,13 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 ## TIP
 
 <pre>
+<code>
 return (
             <h1>댓글</h1>
             <CommentList />
             <CommentForm />
        )
+</code>
 </pre>
 이와 같이 return 하면 "Adjacent JSX elements must be wrapped in an enclosing tag" 의 오류가 발생함.
 
