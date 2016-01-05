@@ -37,7 +37,7 @@ return (
         &lt;/div/&gt;
        )
 </pre>
-이와 같이 **&lt;div&gt;로 한번 감싸서 하나의 컴포넌트를 return!!**
+이와 같이 **&lt;div&gt;로 한번 감싸서 하나의 컴포넌트로 return!!**
 
 참고 : http://stackoverflow.com/questions/31284169/uncaught-error-parse-error-line-38-adjacent-jsx-elements-must-be-wrapped-in-a
 
