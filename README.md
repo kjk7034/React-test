@@ -17,7 +17,7 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 ## TIP
 
-<pre>
+<pre lang="javascript">
 <code>
 return (
             <h1>댓글</h1>
@@ -28,7 +28,7 @@ return (
 </pre>
 이와 같이 return 하면 "Adjacent JSX elements must be wrapped in an enclosing tag" 의 오류가 발생함.
 
-<pre>
+<pre lang="javascript">
 return (
         <div>
             <h1>댓글</h1>
