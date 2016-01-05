@@ -28,7 +28,7 @@ return (
 </pre>
 이와 같이 return 하면 "Adjacent JSX elements must be wrapped in an enclosing tag" 의 오류가 발생함.
 
-<pre lang="javascript">
+<myxml>
 return (
         <div>
             <h1>댓글</h1>
@@ -36,7 +36,7 @@ return (
             <CommentForm />
         </div>
        )
-</pre>
+</myxml>
 이와 같이 <div>로 한번 감싸서 하나의 객체를 return 해서 해결!!
 
 참고 : http://stackoverflow.com/questions/31284169/uncaught-error-parse-error-line-38-adjacent-jsx-elements-must-be-wrapped-in-a
