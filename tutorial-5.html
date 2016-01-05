@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>React - Markdown 추가하기 (dangerouslySetInnerHTML API 활용)</title>
+    <script src="src/react.js"></script>
+    <script src="src/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+</head>
+<p>
+<div id="content"></div>
+<script type="text/jsx">
+    var Comment = React.createClass({
+        render : function(){
+            var rawMarkup = marked(this.props.children.toString(), {sanitize:true});
+            return (
+                    <div className="comment">
+                    <h2 className="comment-Author">
+                            {this.props.author}
+                    </h2>
+                    <p dangerouslySetInnerHTML = {{__html : rawMarkup}}></p>
+            </div>
+            );
+        }
+    })
+
+    var CommentList = React.createClass({
+        render : function(){
+            return (
+                    <div className="commentList">
+                    <Comment author="나">댓글입니까??</Comment>
+            <Comment author="너">응 댓글입니다.</Comment>
+            <Comment author="우리">OK??</Comment>
+            </div>
+            )
+        }
+    })
+    React.render(
+            <CommentList />,
+            document.getElementById('content')
+    );
+</script>
+</body>
+</html>
