@@ -15,7 +15,7 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 - 4. tutorial-3.html
 - 5. tutorial-4.html
 
-## TIP
+## 작업중 발생한 문제점들
 
 <pre>
 return (
@@ -29,7 +29,7 @@ return (
 <pre>
 return (
         &lt;div&gt;
-            &lt;h1&gt;댓글</h1&gt;
+            &lt;h1&gt;댓글&lt;/h1&gt;
             &lt;CommentList /&gt;
             &lt;CommentForm /&gt;
         &lt;/div/&gt;
