@@ -2,7 +2,7 @@
 http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 0.14.0 alpha1 한글판을 읽으면서 하나씩 따라해보는 중...
 
-현재 0.14.5 버전(https://facebook.github.io/react/docs/getting-started.html)이 있지만, 일단 0.14.0 으로 시작함.
+현재 0.14.5 버전이 있지만, 일단 0.14.0 으로 시작함.
 
 0.14.0은 JSXTransformer-0.14.0-alpha.js을 사용하고 있고, 0.14.5는 babel을 사용하여 설명을 하고 있음.
 
@@ -17,25 +17,25 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 ## TIP
 
-<pre lang="javascript">
+<pre>
 return (
-            <h1>댓글</h1>
-            <CommentList />
-            <CommentForm />
+            &lt;h1>댓글</h1&gt;
+            &lt;CommentList /&gt;
+            &lt;CommentForm /&gt;
        )
 </pre>
 이와 같이 return 하면 "Adjacent JSX elements must be wrapped in an enclosing tag" 의 오류가 발생함.
 
-<pre lang="html">
+<pre>
 return (
-        <div>
-            <h1>댓글</h1>
-            <CommentList />
-            <CommentForm />
-        </div>
+        &lt;div&gt;
+            <h1>댓글</h1&gt;
+            <CommentList /&gt;
+            <CommentForm /&gt;
+        &lt;/div/&gt;
        )
 </pre>
-이와 같이 <div>로 한번 감싸서 하나의 객체를 return 해서 해결!!
+이와 같이 &lt;div&gt;로 한번 감싸서 하나의 컴포넌트를 return!!
 
 참고 : http://stackoverflow.com/questions/31284169/uncaught-error-parse-error-line-38-adjacent-jsx-elements-must-be-wrapped-in-a
 
