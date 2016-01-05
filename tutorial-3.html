@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>React - props / 컴포넌트 프로퍼티</title>
+    <script src="src/react.js"></script>
+    <script src="src/JSXTransformer.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<script type="text/jsx">
+    var Comment = React.createClass({
+        render : function(){
+            return (
+                <div className="comment">
+                    <h2 className="comment-Author">
+                       {this.props.author}
+                    </h2>
+                    {this.props.children}
+                </div>
+            );
+        }
+    })
+
+    var CommentList = React.createClass({
+        render : function(){
+            return (
+                <div className="commentList">
+                    <Comment author="나">댓글입니까??</Comment>
+                    <Comment author="너">응 댓글입니다.</Comment>
+                    <Comment author="우리">OK??</Comment>
+                </div>
+            )
+        }
+    })
+    React.render(
+            <CommentList />,
+            document.getElementById('content')
+    );
+</script>
+</body>
+</html>
