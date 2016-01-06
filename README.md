@@ -32,7 +32,7 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 - tutorial-5.html (Markdown 추가하기 - dangerouslySetInnerHTML API 활용)
 
-  추천하지 않는 이유(https://github.com/facebook/react/blob/master/docs/tips/19-dangerously-set-inner-html.ko-KR.md)는 해당 번역본에서 자세히 확인.
+  추천하지 않는 이유( https://github.com/facebook/react/blob/master/docs/tips/19-dangerously-set-inner-html.ko-KR.md )는 해당 번역본에서 자세히 확인.
 
 ## 작업중 발생한 이슈들 모음
 
