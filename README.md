@@ -34,6 +34,30 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
   추천하지 않는 이유( https://github.com/facebook/react/blob/master/docs/tips/19-dangerously-set-inner-html.ko-KR.md )는 해당 번역본에서 자세히 확인.
 
+- tutorial-6.html (데이터 모델 연결하기)
+
+  json 형태의 data객체를 this.props을 통해서 전달되는 과정 확인.
+
+  그리고 this.props.data.map 에서 underscore에서 보던 .map을 보게 되었다. React.Children.map ( https://facebook.github.io/react/docs/top-level-api.html )과 같이 사용할 수 있다.
+
+  **Each child in an array or iterator should have a unique "key" prop.** 발생 이슈 참고.
+
+- tutorial-7.html (데이터 서버에서 가져오기(Fetching))
+
+  state, componentDidMount에 대한 이해가 필요. (아래 설명은 번역글 내용 중 일부)
+
+  지금까지, 각각의 컴포넌트는 props를 기반으로 한번 렌더되었습니다. props는 불변성을 갖습니다: 그것들은 부모에서 전달되어 부모에게 "소유" 되어 있습니다. 컴포넌트에 상호작용을 구현하기 위해서, 가변성을 갖는 state를 소개합니다. this.state는 컴포넌트에 한정(private)되며 this.setState()를 통해 변경할 수 있습니다. state가 업데이트 되면, 컴포넌트는 자신을 스스로 다시 렌더링합니다.
+
+  render() 메소드는 this.props와 this.state를 위한 함수로 선언적으로 작성됩니다. 프레임워크에서 입력값에 따른 UI가 항상 일관성 있음을 보장해줍니다.
+
+  여기서 componentDidMount는 컴포넌트가 렌더링 된 다음 React에 의해 자동으로 호출되는 메소드입니다. 동적 업데이트의 핵심은 this.setState()의 호출입니다. 우리가 이전의 댓글 목록을 서버에서 넘어온 새로운 목록으로 변경하면 자동으로 UI가 업데이트 될 것입니다. 이 반응성 덕분에 실시간 업데이트에 아주 작은 수정만 가해집니다. 우리는 여기선 간단한 폴링을 사용.
+
+- tutorial-8.html (데이터 서버에서 가져오기(Fetching) - setInterval 적용)
+
+  7번 예제에서 ajax 호출을 변도의 메소드로 분리하고, 2초마다 계속 호출하게 함. **주의 : {2000}을 "{2000}"으로 적용하면 Number가 아닌 String으로 받아서 2초마다가 아닌 계속 적용됨.**
+
+
+
 ## 작업중 발생한 이슈들 모음
 
 ### tutorial-2.html 내용
@@ -45,7 +69,7 @@ return (
             &lt;CommentForm /&gt;
        )
 </pre>
-이와 같이 return 하면 "Adjacent JSX elements must be wrapped in an enclosing tag" 의 오류가 발생함.
+이와 같이 return 하면 "**Adjacent JSX elements must be wrapped in an enclosing tag**" 의 오류가 발생함.
 
 <pre>
 return (
@@ -60,7 +84,28 @@ return (
 
 참고 : http://stackoverflow.com/questions/31284169/uncaught-error-parse-error-line-38-adjacent-jsx-elements-must-be-wrapped-in-a
 
+### tutorial-6.html 내용
 
+<pre>
+var commentNodes = this.props.data.map(function (comment){
+    return (
+        &lt;Comment author={comment.author}&gt;
+            {comment.text}
+        &lt;/Comment&gt;
+    )
+})
+</pre>
 
+위와 같이 작업을 했을 때는 **Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of CommentList. See https://fb.me/react-warning-keys for more information.** Warning이 발생했다.
 
+key값을 다음과 같이 설정해줘서 해결했다.
 
+<pre>
+var commentNodes = this.props.data.map(function (comment, idx){
+    return (
+        &lt;Comment author={comment.author} key={idx}&gt;
+            {comment.text}
+        &lt;/Comment&gt;
+    )
+})
+</pre>
