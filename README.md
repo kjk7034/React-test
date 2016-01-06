@@ -10,6 +10,8 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 ## 테스트 파일 설명
 
+  직접따라 해보면서 느낌점과 한글판 문서의 내용을 참고해서 정리.
+
 - helloworld.html (Helloworld)
 
   기본적인 React.render 문법 이해
@@ -56,7 +58,17 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
   7번 예제에서 ajax 호출을 변도의 메소드로 분리하고, 2초마다 계속 호출하게 함. **주의 : {2000}을 "{2000}"으로 적용하면 Number가 아닌 String으로 받아서 2초마다가 아닌 계속 적용됨.**
 
+- tutorial-9.html (새로운 댓글 추가하기)
 
+  자식 컴포넌트의 이름을 지정하기 위해 **ref** 어트리뷰트를, 컴포넌트를 참조하기 위해 **this.refs**를 사용, .trim()으로 문자열 양쪽 끝의 공백을 제거
+
+  props으로 콜백 처리 : CommentBox가 댓글목록의 state를 소유하고 있기 때문에 이 로직 또한 CommentBox에 있는것이 타당합니다. 자식 컴포넌트가 그의 부모에게 데이터를 넘겨줄 필요가 있습니다. 부모의 render 메소드에서 새로운 콜백(handleCommentSubmit)을 자식에게 넘겨주고, 자식의 onCommentSubmit 이벤트에 그것을 바인딩해주는 식으로 구현합니다. 이벤트가 작동될때(triggered)마다, 콜백이 호출됩니다:
+
+- tutorial-10.html (새로운 댓글 추가시 조금 더 빠르게 느껴지게 하는 TIP??)
+
+  POST를 하기 전에 this.setState를 이용하여 concat한 배열을 먼저 적용해서 빠른것 처럼 보이게 할 수는 있겠지만, ajax를 통해서 success가 아닌 경우에는 Front 오류... 이 방법이 왜 좋다고 설명하는지 잘 모르겠음.
+
+  사이트 예제에서 2초후 적용되게 수정(이유 : 서버쪽 POST처리를 안해서 깜빡이는 느낌이 나서...)
 
 ## 작업중 발생한 이슈들 모음
 
