@@ -12,27 +12,27 @@ http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 
 - helloworld.html (Helloworld)
 
-기본적인 React.render 문법 이해
+  기본적인 React.render 문법 이해
 
 - tutorial-1.html (JSX 유,무 문법차이)
 
-text/jsx 를 사용한 문법과 사용하지 않은 문법 비교
+  text/jsx 를 사용한 문법과 사용하지 않은 문법 비교
 
 - tutorial-2.html (컴포넌트 조합)
 
-React.createClass로 생성한 컴포넌트들의 조합
+  React.createClass로 생성한 컴포넌트들의 조합
 
 - tutorial-3.html (props / 컴포넌트 조합)
 
-props를 이용하여 데이터를 전달 받는 샘플
+  props를 이용하여 데이터를 전달 받는 샘플
 
 - tutorial-4.html (Markdown 추가하기)
 
-marked 라이브러리를 호출, React는 이런 식으로 XSS 공격을 예방합니다. 우회할 방법이 있긴 하지만 프레임워크는 사용하지 않도록 경고하고 있습니다.
+  marked 라이브러리를 호출, React는 이런 식으로 XSS 공격을 예방합니다. 우회할 방법이 있긴 하지만 프레임워크는 사용하지 않도록 경고하고 있습니다.
 
 - tutorial-5.html (Markdown 추가하기 - dangerouslySetInnerHTML API 활용)
 
-추천하지 않는 이유(https://github.com/facebook/react/blob/master/docs/tips/19-dangerously-set-inner-html.ko-KR.md)는 해당 번역본에서 자세히 확인.
+  추천하지 않는 이유(https://github.com/facebook/react/blob/master/docs/tips/19-dangerously-set-inner-html.ko-KR.md)는 해당 번역본에서 자세히 확인.
 
 ## 작업중 발생한 이슈들 모음
 
