@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>React - 데이터 모델 연결하기</title>
+    <script src="src/react.js"></script>
+    <script src="src/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+</head>
+<p>
+<div id="content"></div>
+<script type="text/jsx">
+    var data = [
+        {"author" : "Wise", "text" : "댓글입니다."},
+        {"author" : "김준극", "text" : "*또 다른* 댓글입니다."},
+        {"author" : "KIM JUN GEUK", "text" : "Help ~!~!"}
+    ];
+    var CommentBox = React.createClass({
+        render : function (){
+            return (
+                <div className="commentBox">
+                    <h1>댓글</h1>
+                    <CommentList data={this.props.data} />
+                </div>
+            )
+        }
+    })
+
+    var CommentList = React.createClass({
+        render : function(){
+            var commentNodes = this.props.data.map(function (comment){
+                return (
+                    <Comment author={comment.author}>
+                        {comment.text}
+                    </Comment>
+                )
+            })
+            return (
+                <div className="commentList">
+                    {commentNodes}
+                </div>
+            )
+        }
+    })
+
+    var Comment = React.createClass({
+        render : function () {
+            return (
+                <div className="comment">
+                    <h2 className="commentAuthor">{this.props.author}</h2>
+                    {this.props.children}
+                </div>
+            )
+        }
+    })
+
+    React.render(
+        <CommentBox data={data} />,
+        document.getElementById("content")
+    )
+
+</script>
+</body>
+</html>
