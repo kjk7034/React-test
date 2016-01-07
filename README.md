@@ -121,3 +121,9 @@ var commentNodes = this.props.data.map(function (comment, idx){
     )
 })
 </pre>
+
+## 기타
+
+- 자동으로 HTML을 JSX로 변환해주는 Compiler( https://facebook.github.io/react/html-jsx.html )를 통해서 HTML이 JSX로 어떻게 변하는지 볼수 있었다.
+
+- JSX Compiler Service ( https://facebook.github.io/react/jsx-compiler.html )를 검색해보니, **This tool has been removed as JSXTransformer has been deprecated.** 라고 되어있었고, Babel을 쓰라고 되어있다. 그래서 0.14.5에서는 JSX가 아닌 Babel을 사용한 듀토리얼을 제공하고 있는 것 같다.
