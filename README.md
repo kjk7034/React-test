@@ -1,4 +1,4 @@
-# React 튜토리얼 따라해보기
+# React 튜토리얼 따라해보기 (0.14.0 alpha1 한글판)
 http://reactkr.github.io/react/docs/tutorial-ko-KR.html
 0.14.0 alpha1 한글판을 읽으면서 하나씩 따라해보는 중... 따라하면서 느낌점을 적었으며, 기본 설명은 해당 사이트를 통해서 확인.
 
